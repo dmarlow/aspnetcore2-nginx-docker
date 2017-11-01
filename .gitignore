@@ -1,0 +1,6 @@
+src/api/obj/
+src/obj/
+src/api/bin/
+src/.vs/
+.vs/
+*.pubxml

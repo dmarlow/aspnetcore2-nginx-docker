@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  api1:
+    image: api
+  api2:
+    image: api
+  api3:
+    image: api
+
+  nginx:
+    image: nginx
+    ports:
+      - "5100:5100"
+    links:
+      - api1
+      - api2
+      - api3
