@@ -6,7 +6,7 @@ Simple ASP.NET Core 2 behind nginx using docker.
 
 `docker build -t api ./api` to build the *api*
 
-`docker build -t nginx ./nginx` to build the *api*
+`docker build -t nginx ./nginx` to build *nginx*
 
 ## Run
 `docker-compose up`
