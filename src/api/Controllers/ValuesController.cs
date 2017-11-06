@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Api.Auth;
 
-namespace AspNetCoreLinux.Controllers
+namespace Api.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller
@@ -18,12 +19,13 @@ namespace AspNetCoreLinux.Controllers
                 Environment.MachineName;
             return new[] { $"MachineName={name}" }.Union(Request.Headers.Select(x => $"{x.Key}={x.Value}"));
         }
-
+        // https://docs.microsoft.com/en-us/aspnet/core/migration/1x-to-2x/identity-2x
+        [Permission("client_report_api")]
         // GET api/values/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            return "value";
+            return id.ToString();
         }
 
         // POST api/values

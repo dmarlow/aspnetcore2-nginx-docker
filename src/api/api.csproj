@@ -3,14 +3,31 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+    <RootNamespace>Api</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Properties\PublishProfiles\DgApiCore - Web Deploy.pubxml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="BearerTokenBridge" Version="1.0.1" />
+    <PackageReference Include="Insight.Database" Version="6.0.0" />
+    <PackageReference Include="Insight.Database.Json" Version="6.0.0" />
+    <PackageReference Include="Insight.Database.Providers.Default" Version="6.0.0" />
+    <PackageReference Include="log4net" Version="2.0.8" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="SimpleInjector" Version="4.0.12" />
+    <PackageReference Include="SimpleInjector.Integration.AspNetCore" Version="4.0.12" />
+    <PackageReference Include="SimpleInjector.Integration.AspNetCore.Mvc" Version="4.0.12" />
+    <PackageReference Include="SimpleInjector.Integration.AspNetCore.Mvc.Core" Version="4.0.12" />
+    <PackageReference Include="StackifyMiddleware" Version="2.0.3" />
   </ItemGroup>
 
   <ItemGroup>
